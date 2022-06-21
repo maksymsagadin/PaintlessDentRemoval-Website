@@ -37,7 +37,7 @@ const ContactForm = () => {
 	}
 
 	const contactData = {
-		location: 'Located in Livermore, California',
+		location: 'Located in Livermore, CA',
 		sms: 'Text me at 650-123-1234',
 	}
 	

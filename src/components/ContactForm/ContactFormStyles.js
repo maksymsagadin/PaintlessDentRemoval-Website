@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { light, primary } from '../../data/GlobalData'
+import { light, dark, primary } from '../../data/GlobalData'
 
 export const FormSection = styled.div`
 	padding: 1rem;
@@ -14,9 +14,13 @@ export const FormSection = styled.div`
 export const ContactInfo = styled.h2`
 	margin: 1rem;
 	color: ${light};
+	font-size: 1.2rem;
 	&:first-child {
 		margin-bottom: -1rem;
 		/* line-height: 0.2; */
+	}
+	@media screen and (max-width: 768px) {
+		flex-direction: column-reverse;
 	}
 `
 
@@ -38,8 +42,7 @@ export const FormRow = styled.div`
 
 export const FormColumn = styled.div`
 	margin: 1rem;
-	background: white;
-	border: 20px;
+	/* background: ${light}; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -47,7 +50,8 @@ export const FormColumn = styled.div`
 	flex-direction: column;
 	
 	@media screen and (max-width: 768px) {
-		min-width: 75vw;
+		min-width: 80vw;
+		margin-top: 0;
 	}
 `
 
@@ -69,11 +73,10 @@ export const HeroColumn = styled.div`
 		margin: 0;
 	}
 	@media screen and (max-width: 768px) {
-		min-height: 30vh;
-		min-width: 75vw;
-
+		min-height: 25vh;
+		min-width: 80vw;
+		align-items: flex-start;
 	}
-	
 `
 
 export const FormWrapper = styled.form`
@@ -108,7 +111,6 @@ export const FormInput = styled.input`
 `
 
 export const FormTextArea = styled.textarea`
-	/* display: block; */
 	padding-left: 16px;
 	padding-top: 10px;
 	outline: none;
@@ -119,6 +121,9 @@ export const FormTextArea = styled.textarea`
 	border-left: 1px solid #cfcfcf;
 	font-size: 1rem;
 	resize: none;
+	@media screen and (max-width: 900px) {
+		height: 60px;
+	}
 `
 
 export const FormButton = styled.button`
@@ -130,13 +135,14 @@ export const FormButton = styled.button`
 	width: 100%;
 	font-size: 1.4rem;
 	padding: 5px 15px;
-	border: 2px solid black;
+	border: 2px solid ${dark};
+	color: ${dark};
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	&:hover {
-		color: white;
+		color: ${light};
 		transition: background-color 0.4s ease-in;
-		background-color: black;
+		background-color: ${dark};
 	}
 `
