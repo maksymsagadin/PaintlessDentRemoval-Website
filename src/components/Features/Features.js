@@ -34,7 +34,7 @@ const Features = ({ id }) => {
 				scale: 1,
 				y: 0,
 				opacity: 1,
-			});
+			})
 		}
 	}, [inView, animation])
 
