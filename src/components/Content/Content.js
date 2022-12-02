@@ -38,14 +38,8 @@ const Content = ({
 			animation.start({
 				opacity: 1,
 				scale: 1,
-			});
-			return;
+			})
 		}
-
-		animation.start({
-			opacity: 0,
-			scale: 0.3,
-		});
 	}, [inView, animation])
 
     return (
