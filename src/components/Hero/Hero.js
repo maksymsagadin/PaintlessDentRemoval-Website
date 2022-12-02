@@ -32,11 +32,6 @@ const Hero = () => {
 			</HeroSection>
 			<Navbar hide={inView} setShowModal={setShowModal} />
 			<Modal show={showModal} onHide={() => setShowModal(false)}>
-				{/* <ContentHeading inverse='true'>headline</ContentHeading> */}
-				{/* <ImgWrapper>
-					<Img src={img} alt={alt} />
-				</ImgWrapper> */}
-				{/* <Subtitle inverse='true'>info</Subtitle> */}
 				<ContactForm />
 			</Modal>
 		</>
