@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const HeroSection = styled.section`
 	height: 100vh;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
 		url('./assets/hero_image0.jpg');
 	background-position: center;
 	background-size: cover;
 	display: flex;
 	align-items: center;
-	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 	object-fit: contain;
 `
 
