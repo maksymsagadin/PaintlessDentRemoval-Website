@@ -38,7 +38,7 @@ const ContactForm = () => {
 
 	const contactData = {
 		location: 'Located in Livermore, CA',
-		sms: 'Text me at 650-123-1234',
+		sms: 'Text me at 925-699-3921',
 	}
 	
 	const formData = [
@@ -60,7 +60,7 @@ const ContactForm = () => {
 					</ContactInfo>
 				</HeroColumn>
 				<FormColumn>
-					<FormTitle>Send an Email</FormTitle>
+					<FormTitle>Contact</FormTitle>
 					<FormWrapper ref={form} onSubmit={sendEmail}>
 						{formData.map((el, index) => (
 							<FormInputRow key={index}>
@@ -76,7 +76,7 @@ const ContactForm = () => {
 							placeholder='How can I help?'
 							name='textContent'
 							/>
-						<FormButton type='submit' value='Send'>Contact</FormButton>
+						<FormButton type='submit' value='Send'>Send</FormButton>
 					</FormWrapper>
 					{error && (
 						<FormMessage
