@@ -65,7 +65,7 @@ export const HeroColumn = styled.div`
 	background-size: cover;
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-end;
+	align-items: center;
 	border-radius: 8px;
 	flex-direction: column;
 	@media screen and (max-width: 900px) {
