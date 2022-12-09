@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import ContactForm from '../ContactForm/ContactForm'
 import { HeroSection, HeroHeading, HeroText, ButtonWrapper } from './HeroStyles'
 import { useInView } from 'react-intersection-observer'
+import { Link as LinkScroll } from 'react-scroll'
 import Modal from '../Modal/Modal'
 
 const Hero = () => {
@@ -17,7 +18,7 @@ const Hero = () => {
         <>
 			<HeroSection ref={ref} id="hero">
 				<Container>
-					<HeroHeading>Dents & Things</HeroHeading>
+					<HeroHeading>Dents&Things</HeroHeading>
 					<HeroText>We help you with all of your automotive services</HeroText>
 					<ButtonWrapper>
 						<Button 
@@ -26,6 +27,11 @@ const Hero = () => {
 								setShowModal(true);
 							}}>
 							Contact
+						</Button>
+						<Button >
+							<LinkScroll to={'about'} smooth={true} duration={500}>
+								Scroll ↯
+							</LinkScroll>
 						</Button>
 					</ButtonWrapper>
 				</Container>
