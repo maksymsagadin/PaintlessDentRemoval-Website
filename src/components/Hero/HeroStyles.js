@@ -4,31 +4,32 @@ import { primary, light } from '../../data/GlobalData'
 
 export const HeroSection = styled.section`
 	height: 100vh;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-		url('./assets/hero_image0.jpg');
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+		url('./assets/hero_image.jpg');
 	background-position: center;
 	background-size: cover;
 	display: flex;
-	padding-top: 5rem;
+	padding-bottom: 5.5rem;
+	align-items: flex-end;
 	object-fit: contain;
 `
 
 export const HeroHeading = styled.h1`
-    font-size: clamp(3.5rem, 5vw, 6rem);
+    font-size: clamp(2rem, 4vw, 6rem);
     margin-bottom: 1.5rem;
     color: ${primary};
     width: 100%;
-    letter-spacing: 7px;
+    letter-spacing: 0.75rem;
     text-align: center;
 	text-shadow: 1px 1px 1px #000;
 `
 
 export const HeroText = styled.p`
 	margin-bottom: 35px;
-	font-size: clamp(1.3rem, 1.5vw, 1.7rem);
+	font-size: clamp(1.2rem, 4vw, 1.6rem);
 	line-height: 24px;
 	text-align: center;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 	color: ${light};
 	text-shadow: 0.5px 0.5px 0.5px #000;
 
@@ -40,5 +41,5 @@ export const ButtonWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-flow: wrap;
-	gap: 0.5rem;
+	gap: 1rem;
 `
