@@ -4,8 +4,8 @@ import HomePage from './pages/HomePage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const App = () => {
-  return (
-    <Router>
+	return (
+    	<Router>
 			<GlobalStyle />
 			<Routes>
 				<Route path="/" element={<HomePage />} />
