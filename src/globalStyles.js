@@ -31,6 +31,7 @@ export const MainHeading = styled.h1`
     width: 100%;
     letter-spacing: 4px;
     text-align: center;
+	text-shadow: 0.5px 0.5px 0.5px #000;
 `
 export const Button = styled.button`
 	border-radius: 4px;
@@ -45,6 +46,8 @@ export const Button = styled.button`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	text-shadow: 0.5px 0.5px 0.5px #000;
 	&:before {
 		background: ${primary};
 		content: '';
@@ -53,16 +56,18 @@ export const Button = styled.button`
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -1;
-		transition: all 0.6s ease;
-		width: 102%;
-		height: 0%;
+		transition: all 0.5s ease-in-out;
+		width: 100%;
+		height: 1%;
 	}
 	&:hover:before {
-		height: 200%;
+		height: 100%;
+
 	}
 	&:hover {
 		z-index: 1;
 		color: black;
+
 	}
 `
 
