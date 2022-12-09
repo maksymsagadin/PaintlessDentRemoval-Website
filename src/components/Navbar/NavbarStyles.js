@@ -34,6 +34,7 @@ export const NavLogo = styled(Link)`
 	white-space: nowrap;
 	align-items: center;
 	z-index: 50;
+	text-shadow: 1px 1px 1px #000;
 	&:hover {
 		color: ${primary};
 		transition: all 0.3s ease;
