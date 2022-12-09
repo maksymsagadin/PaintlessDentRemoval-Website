@@ -25,7 +25,7 @@ const Hero = () => {
 							onClick={() => {
 								setShowModal(true);
 							}}>
-							Get in contact
+							Contact
 						</Button>
 					</ButtonWrapper>
 				</Container>
