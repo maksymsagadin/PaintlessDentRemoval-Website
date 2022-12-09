@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Button, Container, MainHeading } from '../../globalStyles'
+import { Button, Container } from '../../globalStyles'
 import Navbar from '../Navbar/Navbar'
 import ContactForm from '../ContactForm/ContactForm'
-import { HeroSection, HeroText, ButtonWrapper } from './HeroStyles'
+import { HeroSection, HeroHeading, HeroText, ButtonWrapper } from './HeroStyles'
 import { useInView } from 'react-intersection-observer'
 import Modal from '../Modal/Modal'
 
@@ -17,7 +17,7 @@ const Hero = () => {
         <>
 			<HeroSection ref={ref} id="hero">
 				<Container>
-					<MainHeading>Paintless Dent Repair.</MainHeading>
+					<HeroHeading>Dents & Things</HeroHeading>
 					<HeroText>We help you with all of your automotive services</HeroText>
 					<ButtonWrapper>
 						<Button 
