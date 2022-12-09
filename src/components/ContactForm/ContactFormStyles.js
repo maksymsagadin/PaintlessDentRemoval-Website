@@ -60,7 +60,7 @@ export const HeroColumn = styled.div`
 	min-height: 50vh;
 	min-width: 50vw;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-		url('./assets/hero_image2.jpg');
+		url('./assets/hero_image0.jpg');
 	background-position: center;
 	background-size: cover;
 	display: flex;
