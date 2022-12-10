@@ -21,7 +21,7 @@ const Info = ({ id }) => {
         <InfoSection id={id}>
 			<InfoRow>
 				<InfoColumn>
-					<Image src="./assets/heromain1.jpg" alt="" />
+					<Image src="./assets/heromain1.jpg" alt="Jacob Kingsfather" />
 				</InfoColumn>
 				<InfoColumn>
 					<InfoWrapper>
