@@ -21,18 +21,14 @@ const Hero = () => {
 					<HeroHeading>Dents&Things</HeroHeading>
 					<HeroText>We help you with all of your automotive services</HeroText>
 					<ButtonWrapper>
-						<Button 
-							big 
-							onClick={() => {
-								setShowModal(true);
-							}}>
+						<Button onClick={() => {setShowModal(true)}}>
 							Contact
 						</Button>
-						<Button >
-							<LinkScroll to={'about'} smooth={true} duration={500}>
+						<LinkScroll to={'about'} smooth={true} duration={500}>
+							<Button>
 								Scroll ↯
-							</LinkScroll>
-						</Button>
+							</Button>
+						</LinkScroll>
 					</ButtonWrapper>
 				</Container>
 			</HeroSection>
