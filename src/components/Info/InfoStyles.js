@@ -19,7 +19,8 @@ export const InfoRow = styled.div`
 	@media screen and (max-width: 768px) {
 		grid-template-columns: 100%;
 		> div:first-child {
-			padding: 1rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
 			width: 100%;
 		}
 	}
@@ -39,9 +40,12 @@ export const Image = styled.div`
 	background-size: cover;
 `
 export const InfoWrapper = styled.div`
-	padding: 1rem;
+	padding-right: 2rem;
 	max-width: 540px;
 	margin: auto;
+	@media screen and (max-width: 768px) {
+		padding: 1rem;
+	}
 `
 
 export const InfoHeading = styled.h2`
