@@ -5,7 +5,7 @@ import { light, dark, primary } from '../../data/GlobalData'
 
 export const InfoSection = styled(Section)`
 	padding: 24px 0 0;
-	@media screen and (max-width: 940px) {
+	@media screen and (max-width: 768px) {
 		padding: 90px 20px;
 	}
 `
@@ -14,12 +14,13 @@ export const InfoRow = styled.div`
 	display: grid;
 	width: 100%;
 	grid-template-columns: repeat(2, 1fr);
-	margin-top: 5rem;
 	grid-auto-columns: 2rem;
-	@media screen and (max-width: 940px) {
-		grid-template-columns: repeat(1, 1fr);
+	gap: 2rem;
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 100%;
 		> div:first-child {
-			display: none;
+			padding: 1rem;
+			width: 100%;
 		}
 	}
 `
@@ -27,25 +28,25 @@ export const InfoRow = styled.div`
 export const InfoColumn = styled.div`
 	display: flex;
 	flex-direction: column;
-	@media screen and (max-width: 940px) {
-		align-items: center;
-	}
+	justify-content: center;
 `
 
 export const Image = styled.div`
 	height: 600px;
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(2, 3, 5, 0.9)),
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(2, 3, 5, 0.4)),
 		url('./assets/jacob.jpg');
 	background-position: 0px 33%;
 	background-size: cover;
-	display: flex;
-	align-items: center;
-	object-fit: contain;
+`
+export const InfoWrapper = styled.div`
+	padding: 1rem;
+	max-width: 540px;
+	margin: auto;
 `
 
 export const InfoHeading = styled.h2`
 	margin: 1rem 0 2rem;
-	font-size: clamp(2.1rem, 7vw, 3rem);
+	font-size: clamp(2.1rem, 4vw, 3rem);
 	line-height: 1.1;
 	font-weight: 600;
 	color: ${({ inverse }) => (inverse ? dark : light )};
@@ -61,16 +62,6 @@ export const InfoDesc = styled.div`
 	font-size: clamp(1rem, 2vw, 1.1rem);
 	@media screen and (max-width: 768px) {
 		text-align: center;
-	}
-`
-
-export const InfoWrapper = styled.div`
-	padding-left: 4rem;
-	padding-right: 2rem;
-	padding-top: 2rem;
-	max-width: 540px;
-	@media screen and (max-width: 768px) {
-		padding: 0;
 	}
 `
 
