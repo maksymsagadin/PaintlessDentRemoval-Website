@@ -30,6 +30,9 @@ export const InfoColumn = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
 `
 
 export const Image = styled.div`
