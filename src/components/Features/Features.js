@@ -44,7 +44,7 @@ const Features = ({ id }) => {
 				<FeatureTextWrapper
 					initial={initial}
 					animate={animation}
-					transition={{ duration: 0.3 }}
+					transition={{ duration: 0.5 }}
 				>
 					<FeatureTitle>{featuresData.title}</FeatureTitle>
 					<FeatureMainText>{featuresData.text}</FeatureMainText>
@@ -56,10 +56,9 @@ const Features = ({ id }) => {
 							animate={animation}
 							transition={{ duration: 0.7 + index * 0.1 }}
 							key={index}
-						>
+							>
 							<FeatureImageWrapper>
 								{el.icon}
-								{/* <FeatureImage src={el.image} alt="feature" /> */}
 							</FeatureImageWrapper>
 							<FeatureName>{el.name}</FeatureName>
 							<FeatureText>{el.description}</FeatureText>

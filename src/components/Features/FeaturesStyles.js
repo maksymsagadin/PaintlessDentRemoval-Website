@@ -81,12 +81,12 @@ export const FeatureName = styled.h3`
 export const FeatureText = styled.p`
 	margin: 1rem 0 auto;
 	text-align: center;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	line-height: 1.73;
 	letter-spacing: 0.5px;
 	color: #626881;
-	color: ${({ inverse }) => (inverse ? '#626881' : '#bcbcbc')};
-	@media screen and (max-width: 768px) {
+	color: ${({ inverse }) => (inverse ? dark : light)};
+	/* @media screen and (max-width: 768px) {
 		display: none;
-	}
+	} */
 `
