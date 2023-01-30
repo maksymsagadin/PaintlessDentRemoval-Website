@@ -16,6 +16,7 @@ export const HeroSection = styled.section`
 
 export const HeroHeading = styled.h1`
     font-size: clamp(2rem, 4vw, 6rem);
+	font-weight: 700;
     margin-bottom: 1.5rem;
     color: ${primary};
     width: 100%;

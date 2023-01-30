@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 import { Link as LinkScroll } from 'react-scroll'
 import Modal from '../Modal/Modal'
 
-const Hero = () => {
+const Hero = ({heading}) => {
     const [showModal, setShowModal] = useState(false)
 
     const { ref, inView } = useInView({
@@ -18,7 +18,7 @@ const Hero = () => {
         <>
 			<HeroSection ref={ref} id="hero">
 				<Container>
-					<HeroHeading>Dents&Things</HeroHeading>
+					<HeroHeading>{heading}</HeroHeading>
 					<HeroText>We help you with all of your automotive services</HeroText>
 					<ButtonWrapper>
 						<Button onClick={() => {setShowModal(true)}}>

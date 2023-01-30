@@ -104,6 +104,7 @@ export const NavLinks = styled(LinkScroll)`
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 100%;
+	font-weight: 600;
 	&.active {
 		@media screen and (min-width: 960px) {
 			border-bottom: 2px solid ${primary};

@@ -38,6 +38,25 @@ export const ContentColumn = styled(motion.div)`
 		align-items: center;
 	}
 `
+export const ContentHeading = styled(motion.h2)`
+	margin: 1rem 0 0.5rem;
+	font-size: clamp(1.3rem, 7vw, 3rem);
+	line-height: 1.1;
+	font-weight: 700;
+	color: ${ ({inverse}) => (inverse ? dark : light )};
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
+`
+export const Subtitle = styled(motion.p)`
+	max-width: 440px;
+	margin-top: ${({ mt }) => (mt ? '1.3rem' : '0')};
+	margin-bottom: 30px;
+	line-height: 24px;
+	color: ${ ({inverse}) => (inverse ? '#6a6a6a' : light )};
+	font-size: clamp(0.8rem, 2vw, 1rem);
+	font-weight: 500;
+`
 
 export const TextWrapper = styled.div`
 	max-width: 540px;
@@ -121,22 +140,5 @@ export const Img = styled(motion.img)`
 	z-index: 1;
 `
 
-export const ContentHeading = styled(motion.h2)`
-	margin: 1rem 0 0.5rem;
-	font-size: clamp(1.3rem, 7vw, 3rem);
-	line-height: 1.1;
-	font-weight: 600;
-	color: ${ ({inverse}) => (inverse ? dark : light )};
-	@media screen and (max-width: 768px) {
-		text-align: center;
-	}
-`
 
-export const Subtitle = styled(motion.p)`
-	max-width: 440px;
-	margin-top: ${({ mt }) => (mt ? '1.3rem' : '0')};
-	margin-bottom: 30px;
-	line-height: 24px;
-	color: ${ ({inverse}) => (inverse ? '#6a6a6a' : light )};
-	font-size: clamp(0.8rem, 2vw, 1rem);
-`
+

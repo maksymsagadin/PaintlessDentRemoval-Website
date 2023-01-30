@@ -2,11 +2,11 @@ import styled, {createGlobalStyle} from 'styled-components'
 import { light, dark, primary } from './data/GlobalData'
 
 const GlobalStyle = createGlobalStyle`
-    *{
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Monsterrat';
+        font-family: 'Rubik', sans-serif;
     }
 `
 export const Container = styled.div`
