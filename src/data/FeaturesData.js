@@ -8,7 +8,7 @@ export const featuresData = {
 	content: [
 		{
 			name: 'Paintless Dent Repair',
-			description: 'Genuinely Dented to Nicest with a few pushes',
+			description: 'From Dinged to Nicest with a few pushes',
 			icon: iconStyle(GiClawHammer),
 			// image: './assets/features/Network.svg',
 		},
@@ -20,7 +20,7 @@ export const featuresData = {
 		},
 		{
 			name: 'Detailing',
-			description: 'We help you make your car the nicest',
+			description: 'We can provide a show car finish',
 			icon: iconStyle(GiGooSpurt),
 			// image: './assets/features/Fun.svg',
 		},
