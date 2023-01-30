@@ -10,19 +10,16 @@ export const featuresData = {
 			name: 'Paintless Dent Repair',
 			description: 'From Dinged to Nicest with a few pushes',
 			icon: iconStyle(GiClawHammer),
-			// image: './assets/features/Network.svg',
 		},
 		{
 			name: 'Fender Shaving',
 			description: 'Immaculately sliced fenders for fitment',
 			icon: iconStyle(GiCarWheel),
-			// image: './assets/features/Speech.svg',
 		},
 		{
 			name: 'Detailing',
 			description: 'We can provide a show car finish',
 			icon: iconStyle(GiGooSpurt),
-			// image: './assets/features/Fun.svg',
 		},
 	],
 }

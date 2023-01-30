@@ -31,14 +31,5 @@ const contentThree = {
 	alt: 'detailing supplies',
 }
 
-// const contentFour = {
-// 	reverse: false,
-// 	inverse: false,
-// 	headline: 'headline',
-// 	description:
-// 		'description',
-// 	buttonLabel: 'Find out more',
-// 	img: './assets/.jpg',
-// };
 
 export const contentData = [contentOne, contentTwo, contentThree];

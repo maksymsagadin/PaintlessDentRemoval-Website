@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Monsterrat', 'sans-serif';
+        font-family: 'Monsterrat';
     }
 `
 export const Container = styled.div`
