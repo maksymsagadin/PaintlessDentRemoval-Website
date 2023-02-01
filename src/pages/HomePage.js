@@ -15,12 +15,12 @@ const HomePage = () => {
       <Info id="about" />
       <Features id="services" />
 
-      <div id="work">
+      <div>
           {contentData.map((content, index) => (
               <Content {...content} key={index} />
           ))}
-          <WorkSection />
       </div>
+      <WorkSection id='work'/>
     </>
   )
 }
