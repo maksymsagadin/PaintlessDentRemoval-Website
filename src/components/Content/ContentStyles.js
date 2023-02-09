@@ -39,7 +39,7 @@ export const ContentColumn = styled(motion.div)`
 	}
 `
 export const ContentHeading = styled(motion.h2)`
-	margin: 1rem 0 0.5rem;
+	margin: 1rem 0.75rem 0.5rem;
 	font-size: clamp(1.3rem, 7vw, 3rem);
 	line-height: 1.1;
 	font-weight: 700;
@@ -81,13 +81,13 @@ export const TextWrapper = styled.div`
 
 export const ContentButton = styled(motion.button)`
 	height: 3rem;
-	padding: 16px 32px;
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
 	font-weight: 700;
 	font-size: 0.8rem;
 	line-height: 18px;
 	letter-spacing: 1.54px;
 	text-transform: uppercase;
-	cursor: pointer;
 	background: none;
 	color: ${ props => props.color };
 	border-radius: 4px;
@@ -96,7 +96,6 @@ export const ContentButton = styled(motion.button)`
 	font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
 	outline: none;
 	border: 2px solid ${primary};
-	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	&:before {
@@ -115,7 +114,8 @@ export const ContentButton = styled(motion.button)`
 		width: 200%;
 	}
 	&:hover {
-		color: ${({ inverse }) => (inverse ? light : dark )};
+		cursor: pointer;
+		color: ${dark};
 	}
 `
 
