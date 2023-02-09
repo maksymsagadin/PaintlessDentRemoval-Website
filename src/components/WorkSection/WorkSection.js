@@ -8,7 +8,6 @@ import { Img, ImgWrapper, Subtitle } from '../Content/ContentStyles'
 
 const WorkSection = ({ id, galleryData}) => {
 	const { headline, galleryImages } = galleryData
-	console.log(galleryData)
     const animation = useAnimation()
 	const [showModal, setShowModal] = useState(false)
 	const [selectedImage, setSelectedImage] = useState(0)
