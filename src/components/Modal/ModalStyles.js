@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { MdClose } from 'react-icons/md'
+import { VscChromeClose } from 'react-icons/vsc'
 import { motion } from 'framer-motion'
 import { light, dark } from '../../data/GlobalData'
 
@@ -30,14 +30,18 @@ export const ModalWrapper = styled(motion.div)`
 	
 `
 
-export const CloseModalButton = styled(MdClose)`
+export const CloseModalButton = styled(VscChromeClose)`
 	cursor: pointer;
+	color: ${ ({color}) => (color ? light : dark )};
+	background-color: ${ ({color}) => (color ? dark : light )};
+	opacity: 75%;
 	position: absolute;
 	top: 8px;
 	right: 8px;
 	width: 32px;
 	height: 32px;
-	padding: 0;
+	padding: 3px;
+	border-radius: 50%;
 	z-index: 10;
 	@media screen and (max-width: 768px) {
 		top: 5px;

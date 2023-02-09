@@ -17,7 +17,6 @@ export const ContactInfo = styled.h2`
 	font-size: 1.2rem;
 	&:first-child {
 		margin-bottom: -1rem;
-		/* line-height: 0.2; */
 	}
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
@@ -42,7 +41,6 @@ export const FormRow = styled.div`
 
 export const FormColumn = styled.div`
 	margin: 1rem;
-	/* background: ${light}; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,7 +58,7 @@ export const HeroColumn = styled.div`
 	min-height: 50vh;
 	min-width: 50vw;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-		url('./assets/hero_image0.jpg');
+		url(${props => props.bgImg});
 	background-position: center;
 	background-size: cover;
 	display: flex;

@@ -19,7 +19,7 @@ export const navbarData = [
 		to: 'services',
 	},
 	{
-		text: 'Work',
+		text: 'Gallery',
 		spy: true,
 		duration: 500,
 		smooth: true,

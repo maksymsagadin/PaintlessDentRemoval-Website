@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { FaTimes } from 'react-icons/fa'
-import { GiInkSwirl } from 'react-icons/gi'
 import { CgMenuRight } from 'react-icons/cg'
 import { IconContext } from 'react-icons'
 import {
 	Nav,
 	NavbarContainer,
-	NavLogo,
+	NavLeft,
 	ContactButton,
-	NavIcon,
+	NavLogo,
 	MobileIcon,
 	NavMenu,
 	NavLinks,
@@ -18,17 +17,15 @@ import { animateScroll as scroll } from 'react-scroll'
 import { websiteName } from '../../data/GlobalData'
 import { navbarData } from '../../data/NavbarData'
 
-const Navbar = ({ hide, setShowModal }) => {
-    const [show, setShow] = useState(false);
+const Navbar = ({ logo, hide, setShowModal }) => {
+    const [show, setShow] = useState(false)
     return (
         <Nav hide={hide}>
 			<NavbarContainer>
-				<NavLogo to="/" onClick={scroll.scrollToTop}>
-					<NavIcon src="./assets/" alt="" >
-						<GiInkSwirl size='2.5rem' />
-					</NavIcon>
+				<NavLeft to="/" onClick={scroll.scrollToTop}>
+					<NavLogo src={logo.url} alt={websiteName} />
 					{websiteName}
-				</NavLogo>
+				</NavLeft>
 
 				{!hide && (
 					<>
@@ -38,18 +35,18 @@ const Navbar = ({ hide, setShowModal }) => {
 							</MobileIcon>
 						</IconContext.Provider>
 						<NavMenu hide={hide} show={show}>
-							{navbarData.map((el, index) => (
+							{navbarData.map((item, index) => (
 								<NavItem key={index}>
 									<NavLinks
-										spy={el.spy}
-										duration={el.duration}
-										smooth={el.smooth}
-										exact={el.exact}
-										offset={el.offset}
+										spy={item.spy}
+										duration={item.duration}
+										smooth={item.smooth}
+										exact={item.exact}
+										offset={item.offset}
 										onClick={() => setShow(false)}
-										to={el.to}
+										to={item.to}
 									>
-										{el.text}
+										{item.text}
 									</NavLinks>
 								</NavItem>
 							))}

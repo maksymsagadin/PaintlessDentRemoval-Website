@@ -74,7 +74,7 @@ const Modal = ({ show, onHide, children, inverse }) => {
 							y: '-100vh',
 						}}
 					>
-						<CloseModalButton aria-label="Close modal" onClick={onHide} />
+						<CloseModalButton color={inverse} aria-label="Close modal" onClick={onHide} />
 						{children}
 					</ModalWrapper>
 				</Background>

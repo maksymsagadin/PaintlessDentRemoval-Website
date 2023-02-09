@@ -5,7 +5,7 @@ import { primary, light } from '../../data/GlobalData'
 export const HeroSection = styled.section`
 	height: 100vh;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-		url('./assets/hero_image.jpg');
+		url(${props => props.bgImg});
 	background-position: center;
 	background-size: cover;
 	display: flex;

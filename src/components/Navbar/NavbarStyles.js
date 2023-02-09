@@ -24,24 +24,25 @@ export const NavbarContainer = styled(Container)`
 	height: 80px;
 `
 
-export const NavLogo = styled(Link)`
+export const NavLeft = styled(Link)`
 	color: ${light};
 	justify-self: flex-start;
-	cursor: pointer;
 	text-decoration: none;
 	font-size: 2rem;
 	display: flex;
 	white-space: nowrap;
+	font-weight: 600;
 	align-items: center;
 	z-index: 50;
 	text-shadow: 1px 1px 1px #000;
 	&:hover {
 		color: ${primary};
+		cursor: pointer;
 		transition: all 0.3s ease;
 	}
 `
 
-export const NavIcon = styled.div`
+export const NavLogo = styled.img`
 	color: ${primary};
 	margin-right: 1.5rem;
 `

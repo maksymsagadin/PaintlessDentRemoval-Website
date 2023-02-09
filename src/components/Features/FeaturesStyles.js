@@ -26,13 +26,12 @@ export const FeatureMainText = styled.p`
 	text-align: center;
 	font-size: clamp(1rem, 2vw, 1.2rem);
 	margin: 2rem auto 0;
-	width: 70%;
-	color: ${({ inverse }) => (inverse ? dark : light)};
+	width: 95%;
+	color: ${light};
 `
 
 export const FeatureTextWrapper = styled(motion.div)`
 	position: relative;
-	padding: 0 0 20px;
 	margin-bottom: 4rem;
 	color: ${({ inverse }) => (inverse ? dark : light)};
 `
@@ -41,7 +40,7 @@ export const FeatureWrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin-top: 4rem;
-	grid-gap: 2rem;
+	grid-gap: 2rem 5rem;
 	@media screen and (max-width: 960px) {
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -58,7 +57,7 @@ export const FeatureImageWrapper = styled.div`
 	margin-bottom: 1rem;
 	border-radius: 50%;
 	background-color: ${primary};
-	padding: 30px;
+	padding: 21px;
 `
 
 export const FeatureImage = styled.img`
@@ -70,7 +69,8 @@ export const FeatureName = styled.h3`
 	font-weight: 600;
 	font-size: 1.3rem;
 	letter-spacing: 2px;
-	color: ${({ inverse }) => (inverse ? dark : light)};
+	text-align: center;
+	color: ${light};
 	@media screen and (max-width: 768px) {
 		font-weight: 400;
 		font-size: 1rem;

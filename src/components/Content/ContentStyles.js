@@ -5,7 +5,7 @@ import { light, dark, primary } from '../../data/GlobalData'
 
 export const ContentSec = styled.div`
 	padding: 60px 0;
-	background: ${({ inverse }) => (inverse ? light : dark )};
+	background: ${props => props.color};
 `
 
 export const ContentRow = styled.div`
@@ -13,7 +13,7 @@ export const ContentRow = styled.div`
 	margin: 0 -15px -15px -15px;
 	flex-wrap: wrap;
 	align-items: center;
-	flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+	flex-direction: ${props => props.row};
 	justify-content: space-around;
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
@@ -29,7 +29,7 @@ export const ContentColumn = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	text-align: ${({ reverse }) => (reverse ? 'left' : 'right')};
+	text-align: ${({ row }) => (row ? 'left' : 'right')};
 
 	@media screen and (max-width: 768px) {
 		max-width: 100% !important;
@@ -43,17 +43,19 @@ export const ContentHeading = styled(motion.h2)`
 	font-size: clamp(1.3rem, 7vw, 3rem);
 	line-height: 1.1;
 	font-weight: 700;
-	color: ${ ({inverse}) => (inverse ? dark : light )};
+	color: ${ props => props.color };
 	@media screen and (max-width: 768px) {
 		text-align: center;
 	}
 `
 export const Subtitle = styled(motion.p)`
-	max-width: 440px;
+	max-width: 650px;
 	margin-top: ${({ mt }) => (mt ? '1.3rem' : '0')};
 	margin-bottom: 30px;
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
 	line-height: 24px;
-	color: ${ ({inverse}) => (inverse ? '#6a6a6a' : light )};
+	color: ${ props => props.color };
 	font-size: clamp(0.8rem, 2vw, 1rem);
 	font-weight: 500;
 `
@@ -87,7 +89,7 @@ export const ContentButton = styled(motion.button)`
 	text-transform: uppercase;
 	cursor: pointer;
 	background: none;
-	color: ${({ inverse }) => (inverse ? 'black' : 'white')};
+	color: ${ props => props.color };
 	border-radius: 4px;
 	white-space: nowrap;
 	padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
@@ -119,7 +121,7 @@ export const ContentButton = styled(motion.button)`
 
 export const ImgWrapper = styled(motion.div)`
 	display: flex;
-	justify-content: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
+	justify-content: flex-start;
 	max-height: 600px;
 	border-radius: 4px;
 	justify-content: center;
@@ -136,7 +138,7 @@ export const Img = styled(motion.img)`
 	vertical-align: middle;
 	display: inline-block;
 	object-fit: cover;
-	max-height: 600px;
+	max-height: 500px;
 	z-index: 1;
 `
 
