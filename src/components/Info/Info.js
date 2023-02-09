@@ -1,6 +1,4 @@
 import React from 'react'
-import { infoData } from '../../data/InfoData'
-
 import {
 	InfoSection,
 	BottomLine,
@@ -14,25 +12,24 @@ import {
 	InfoHeading,
 } from './InfoStyles'
 
-const Info = ({ id }) => {
-    const { headline, description, bottomLine } = infoData
-
+const Info = ({ id, aboutData }) => {
+	const  { heading, description, bottomLine, sideImage } = aboutData
     return (
         <InfoSection id={id}>
 			<InfoRow>
 				<InfoColumn>
-					<Image src="./assets/heromain1.jpg" alt="Jacob Kingsfather" />
+					<Image src={sideImage.url} alt="Jacob Kingsfather | Owner" />
 				</InfoColumn>
 				<InfoColumn>
 					<InfoWrapper>
-						<InfoHeading>{headline}</InfoHeading>
+						<InfoHeading>{heading}</InfoHeading>
 						<InfoDesc>{description}</InfoDesc>
 
 						<BottomLine>
-							{bottomLine.map((el, index) => (
+							{bottomLine.map((item, index) => (
 								<InfoColumn key={index}>
-									<InfoNumber>{el.number}</InfoNumber>
-									<InfoText>{el.numberText}</InfoText>
+									<InfoNumber>{item.number}</InfoNumber>
+									<InfoText>{item.description}</InfoText>
 								</InfoColumn>
 							))}
 						</BottomLine>

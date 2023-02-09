@@ -11,22 +11,21 @@ import {
 	FeatureTextWrapper,
 	FeatureMainText,
 } from './FeaturesStyles'
-import { featuresData } from '../../data/FeaturesData'
+import Content from '../Content/Content'
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const Features = ({ id }) => {
+const Features = ({ id, servicesData }) => {
+	const { heading, description, services } = servicesData
     const initial = {
 		scale: 0.2,
 		y: 40,
 		opacity: 0,
 	}
-
-	const animation = useAnimation();
-
 	const { ref, inView } = useInView({
 		threshold: 0.4,
 	})
+	const animation = useAnimation()
 
 	useEffect(() => {
 		if (inView) {
@@ -39,18 +38,23 @@ const Features = ({ id }) => {
 	}, [inView, animation])
 
 	return (
-		<FeatureSection id={id}>
+		<div id={id}>
+		<FeatureSection >
 			<Container ref={ref}>
 				<FeatureTextWrapper
 					initial={initial}
 					animate={animation}
 					transition={{ duration: 0.5 }}
-				>
-					<FeatureTitle>{featuresData.title}</FeatureTitle>
-					<FeatureMainText>{featuresData.text}</FeatureMainText>
+					>
+					<FeatureTitle>
+						{heading}
+					</FeatureTitle>
+					<FeatureMainText>
+						{description}
+					</FeatureMainText>
 				</FeatureTextWrapper>
 				<FeatureWrapper>
-					{featuresData.content.map((el, index) => (
+					{services.map((service, index) => (
 						<FeatureColumn
 							initial={initial}
 							animate={animation}
@@ -58,15 +62,19 @@ const Features = ({ id }) => {
 							key={index}
 							>
 							<FeatureImageWrapper>
-								{el.icon}
+								<img src={service.logo.url} alt={service.shortSummary} />
 							</FeatureImageWrapper>
-							<FeatureName>{el.name}</FeatureName>
-							<FeatureText>{el.description}</FeatureText>
+							<FeatureName>{service.heading}</FeatureName>
+							<FeatureText>{service.shortSummary}</FeatureText>
 						</FeatureColumn>
 					))}
 				</FeatureWrapper>
 			</Container>
 		</FeatureSection>
+		{services.map((service, index) => (
+              <Content {...service} key={index} />
+          ))}
+		</div>
 	)
 }
 

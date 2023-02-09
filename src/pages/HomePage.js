@@ -1,26 +1,16 @@
 import React from 'react'
-import GlobalStyle from '../globalStyles'
-import Content from '../components/Content/Content'
 import WorkSection from '../components/WorkSection/WorkSection'
 import Features from '../components/Features/Features'
 import Hero from '../components/Hero/Hero'
 import Info from '../components/Info/Info'
-import { contentData } from '../data/ContentData'
 
-const HomePage = () => {
+const HomePage = ({ heroSection, aboutSection, servicesSection, gallerySection }) => {
   return (
     <>
-      <GlobalStyle />
-      <Hero heading={'Dents N Dings'}/>
-      <Info id="about" />
-      <Features id="services" />
-
-      <div>
-          {contentData.map((content, index) => (
-              <Content {...content} key={index} />
-          ))}
-      </div>
-      <WorkSection id='work'/>
+      <Hero heroData={heroSection}/>
+      <Info id='about' aboutData={aboutSection} />
+      <Features id='services' servicesData={servicesSection} />
+      <WorkSection id='work' galleryData={gallerySection}/>
     </>
   )
 }

@@ -42,7 +42,7 @@ export const WorkImageWrapper = styled(motion.div)`
 	}
 	&:before {
 		background: rgb(0, 0, 0, 0.7);
-		content: 'See more...';
+		content: 'See more info...';
 		position: absolute;
 		width: 100%;
 		z-index: 1;

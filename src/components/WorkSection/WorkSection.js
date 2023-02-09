@@ -5,9 +5,10 @@ import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Modal from '../Modal/Modal'
 import { Img, ImgWrapper, Subtitle } from '../Content/ContentStyles'
-import { workData } from '../../data/WorkData'
 
-const WorkSection = () => {
+const WorkSection = ({ id, galleryData}) => {
+	const { headline, galleryImages } = galleryData
+	console.log(galleryData)
     const animation = useAnimation()
 	const [showModal, setShowModal] = useState(false)
 	const [selectedImage, setSelectedImage] = useState(0)
@@ -31,7 +32,7 @@ const WorkSection = () => {
 
 	return (
 		<>
-			<Section>
+			<Section id={id} >
 				<WorkContainer>
 					<WorkHeading
 						initial={{ opacity: 0, scale: 0.3 }}
@@ -39,10 +40,10 @@ const WorkSection = () => {
 						animate={animation}
 						ref={ref}
 					>
-						See More...
+						{headline}
 					</WorkHeading>
 					<MasonryGrid>
-						{workData.map((item, index) => (
+						{galleryImages.map((image, index) => (
 							<WorkImageWrapper
 								animate={animation}
 								initial={{
@@ -50,11 +51,11 @@ const WorkSection = () => {
 									scale: 0.3,
 								}}
 								transition={{ duration: 0.8 }}
-								className={item.class}
-								key={index}
+								className={image.size}
+								key={image.id}
 								onClick={() => handleClick(index)}
 							>
-								<Image src={item.img}></Image>
+								<Image src={image.image.url} alt={image.description} ></Image>
 							</WorkImageWrapper>
 						))}
 					</MasonryGrid>
@@ -62,9 +63,9 @@ const WorkSection = () => {
 			</Section>
 			<Modal show={showModal} onHide={() => setShowModal(false)}>
 				<ImgWrapper>
-					<Img src={workData[selectedImage].img} alt="image" />
+					<Img src={galleryImages[selectedImage].image.url} alt={galleryImages[selectedImage].description} />
 				</ImgWrapper>
-				<Subtitle mt inverse>{workData[selectedImage].description}</Subtitle>
+				<Subtitle mt inverse>{galleryImages[selectedImage].description}</Subtitle>
 			</Modal>
 		</>
 	)

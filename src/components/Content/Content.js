@@ -16,13 +16,13 @@ import { useAnimation } from 'framer-motion'
 import Modal from '../Modal/Modal'
 
 const Content = ({ 
-	headline,
+	heading,
 	description,
-	buttonLabel,
-	img,
-	alt,
-	inverse,
-	reverse,
+	buttonText,
+	sideImage,
+	textColor,
+	backgroundColor,
+	row,
 }) => {
     const [showModal, setShowModal] = useState(false)
 	const initial = { opacity: 0, scale: 0.3 }
@@ -44,24 +44,24 @@ const Content = ({
 
     return (
         <>
-			<ContentSec inverse={inverse} ref={ref}>
+			<ContentSec color={backgroundColor} ref={ref}>
 				<Container>
-					<ContentRow reverse={reverse}>
-						<ContentColumn reverse={reverse}>
+					<ContentRow row={row}>
+						<ContentColumn row={row}>
 							<TextWrapper>
 								<ContentHeading
 									initial={initial}
 									transition={transition}
 									animate={animation}
-									inverse={inverse}
+									color={textColor}
 								>
-									{headline}
+									{heading}
 								</ContentHeading>
 								<Subtitle
 									initial={initial}
 									transition={{ ...transition, delay: 0.7 }}
 									animate={animation}
-									inverse={inverse}
+									color={textColor}
 								>
 									{description}
 								</Subtitle>
@@ -70,12 +70,12 @@ const Content = ({
 									initial={initial}
 									transition={{ ...transition, delay: 1 }}
 									animate={animation}
-									inverse={inverse}
+									color={textColor}
 									onClick={() => {
 										setShowModal(true);
 									}}
 								>
-									{buttonLabel}
+									{buttonText}
 								</ContentButton>
 							</TextWrapper>
 						</ContentColumn>
@@ -86,9 +86,9 @@ const Content = ({
 						>
 							<ImgWrapper>
 								<Img
-									src={img}
-									alt={alt}
-									initial={{rotate: reverse ? -3 : 3 }}
+									src={sideImage.url}
+									alt={heading}
+									initial={{rotate: !row ? -3 : 3 }}
 									whileHover={{ rotate: 0, scale: 1.0 }}
 									transition={{ duration: 0.5 }}
 								/>
@@ -98,12 +98,10 @@ const Content = ({
 				</Container>
 			</ContentSec>
 			<Modal show={showModal} onHide={() => setShowModal(false)}>
-				<ContentHeading inverse='true'>{headline}</ContentHeading>
 				<ImgWrapper>
-					<Img src={img} alt={alt} />
+					<Img src={sideImage.url} alt={heading} />
 				</ImgWrapper>
-				<Subtitle mt inverse='true'>{description}</Subtitle>
-				
+				<Subtitle mt color={'black'}>{description}</Subtitle>
 			</Modal>
 		</>
     )
