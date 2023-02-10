@@ -135,12 +135,12 @@ export const FormButton = styled.button`
 	padding: 5px 15px;
 	border: 2px solid ${dark};
 	color: ${dark};
-	cursor: pointer;
+	cursor: alias;
 	position: relative;
 	overflow: hidden;
 	&:hover {
 		color: ${light};
-		transition: background-color 0.4s ease-in;
+		transition: background-color 0.5s ease;
 		background-color: ${dark};
 	}
 `

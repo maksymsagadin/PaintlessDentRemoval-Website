@@ -40,8 +40,9 @@ export const ContentColumn = styled(motion.div)`
 `
 export const ContentHeading = styled(motion.h2)`
 	margin: 1rem 0.75rem 0.5rem;
-	font-size: clamp(1.3rem, 7vw, 3rem);
-	line-height: 1.1;
+	font-size: clamp(1.3rem, 7vw, 2.75rem);
+	line-height: 1.2;
+	letter-spacing: 3px;
 	font-weight: 700;
 	color: ${ props => props.color };
 	@media screen and (max-width: 768px) {
@@ -50,11 +51,12 @@ export const ContentHeading = styled(motion.h2)`
 `
 export const Subtitle = styled(motion.p)`
 	max-width: 650px;
-	margin-top: ${({ mt }) => (mt ? '1.3rem' : '0')};
-	margin-bottom: 30px;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
 	margin-left: 0.75rem;
 	margin-right: 0.75rem;
-	line-height: 24px;
+	line-height: 1.1;
+	letter-spacing: 1px;
 	color: ${ props => props.color };
 	font-size: clamp(0.8rem, 2vw, 1rem);
 	font-weight: 500;
@@ -111,7 +113,7 @@ export const ContentButton = styled(motion.button)`
 		height: 0%;
 	}
 	&:hover:before {
-		height: 101%;
+		height: 102%;
 	}
 	&:hover {
 		cursor: alias;

@@ -4,9 +4,9 @@ import { light, dark, primary } from '../../data/GlobalData'
 
 
 export const InfoSection = styled(Section)`
-	padding: 24px 0 0;
+	padding: 4rem 0 0;
 	@media screen and (max-width: 768px) {
-		padding: 90px 20px;
+		padding: 2rem 1rem;
 	}
 `
 
@@ -53,11 +53,13 @@ export const InfoWrapper = styled.div`
 
 export const InfoHeading = styled.h2`
 	margin: 1rem 0 2rem;
-	font-size: clamp(2.1rem, 4vw, 3rem);
-	line-height: 1.1;
+	font-size: clamp(2.1rem, 4vw, 2.75rem);
+	line-height: 1;
+	letter-spacing: 1px;
 	font-weight: 600;
 	color: ${({ inverse }) => (inverse ? dark : light )};
 	@media screen and (max-width: 768px) {
+		margin-bottom: 2rem;
 		text-align: center;
 	}
 `
@@ -65,9 +67,10 @@ export const InfoHeading = styled.h2`
 export const InfoDesc = styled.div`
 	margin-bottom: 3rem;
 	color: ${({ inverse }) => (inverse ? primary : light)};
-	font-size: 1.1rem;
-	font-size: clamp(1rem, 2vw, 1.1rem);
+    letter-spacing: 1px;
+	font-size: clamp(0.9rem, 2vw, 1.2rem);
 	@media screen and (max-width: 768px) {
+		margin-bottom: 2rem;
 		text-align: center;
 	}
 `
@@ -84,7 +87,7 @@ export const BottomLine = styled.div`
 export const InfoNumber = styled.div`
 	font-weight: 700;
 	font-size: 1.3rem;
-	letter-spacing: 0.04rem;
+	letter-spacing: 2px;
 `
 
 export const InfoText = styled.div`

@@ -34,6 +34,7 @@ export const MainHeading = styled.h1`
 	text-shadow: 0.5px 0.5px 0.5px #000;
 `
 export const Button = styled.button`
+    letter-spacing: 4px;
 	border-radius: 4px;
 	background-color: rgba(17, 178, 138, 0.5);
 	white-space: nowrap;
