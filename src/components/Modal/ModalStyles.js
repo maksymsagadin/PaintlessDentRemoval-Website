@@ -31,7 +31,7 @@ export const ModalWrapper = styled(motion.div)`
 `
 
 export const CloseModalButton = styled(VscChromeClose)`
-	cursor: pointer;
+	cursor: alias;
 	color: ${ ({color}) => (color ? light : dark )};
 	background-color: ${ ({color}) => (color ? dark : light )};
 	opacity: 75%;
