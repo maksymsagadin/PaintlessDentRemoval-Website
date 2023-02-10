@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { light, dark, primary } from '../../data/GlobalData'
+import { dark, primary } from '../../data/GlobalData'
 
 
 export const ContentSec = styled.div`
@@ -86,8 +86,7 @@ export const ContentButton = styled(motion.button)`
 	font-weight: 700;
 	font-size: 0.8rem;
 	line-height: 18px;
-	letter-spacing: 1.54px;
-	text-transform: uppercase;
+	letter-spacing: 1.55px;
 	background: none;
 	color: ${ props => props.color };
 	border-radius: 4px;
@@ -98,6 +97,7 @@ export const ContentButton = styled(motion.button)`
 	border: 2px solid ${primary};
 	position: relative;
 	overflow: hidden;
+	text-shadow: 0.5px 0.5px 0.5px #000;
 	&:before {
 		background: ${primary};
 		content: '';
@@ -107,14 +107,14 @@ export const ContentButton = styled(motion.button)`
 		transform: translate(-50%, -50%);
 		z-index: -1;
 		transition: all 0.6s ease;
-		width: 0%;
-		height: 100%;
+		width: 101%;
+		height: 0%;
 	}
 	&:hover:before {
-		width: 200%;
+		height: 101%;
 	}
 	&:hover {
-		cursor: pointer;
+		cursor: alias;
 		color: ${dark};
 	}
 `

@@ -40,11 +40,19 @@ export const NavLeft = styled(Link)`
 		cursor: pointer;
 		transition: all 0.3s ease;
 	}
+	@media screen and (max-width: 768px) {
+		font-weight: 500;
+		font-size: 1.75rem;
+
+	}
 `
 
 export const NavLogo = styled.img`
 	color: ${primary};
 	margin-right: 1.5rem;
+	@media screen and (max-width: 768px) {
+		margin-right: 0.5rem;
+	}
 `
 
 export const MobileIcon = styled.div`
@@ -57,7 +65,7 @@ export const MobileIcon = styled.div`
 		right: 0;
 		transform: translate(-100%, 60%);
 		font-size: 1.8rem;
-		cursor: pointer;
+		cursor: alias;
 	}
 	
 `
@@ -89,7 +97,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
 	height: 80px;
-	cursor: pointer;
+	cursor: alias;
 	@media screen and (max-width: 960px) {
 		width: 100%;
 		&:hover {
@@ -137,7 +145,7 @@ export const ContactButton = styled.button`
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 100%;
-	cursor: pointer;
+	cursor: alias;
 	&:hover {
 		color: ${light};
 		transition: all 0.3s ease;

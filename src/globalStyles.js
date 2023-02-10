@@ -35,18 +35,16 @@ export const MainHeading = styled.h1`
 `
 export const Button = styled.button`
 	border-radius: 4px;
-	background-color: rgba(17, 178, 138, 0.4);
+	background-color: rgba(17, 178, 138, 0.5);
 	white-space: nowrap;
 	padding: ${({ big }) => (big ? '12px 48px' : '12px 24px')};
 	font-weight: 600;
 	color: #fff;
-	font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+	font-size: 1rem;
 	outline: none;
 	border: 2px solid ${primary};
-	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	transition: all 0.5s ease-in-out;
 	text-shadow: 0.5px 0.5px 0.5px #000;
 	&:before {
 		background: ${primary};
@@ -56,17 +54,19 @@ export const Button = styled.button`
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -1;
-		transition: all 0.5s ease-in-out;
-		width: 100%;
-		height: 1%;
+		transition: all 0.6s ease;
+		width: 101%;
+		height: 0%;
 	}
 	&:hover:before {
-		height: 100%;
+		height: 101%;
+		
 
 	}
 	&:hover {
 		z-index: 1;
-		color: black;
+		color: ${dark};
+		cursor: alias;
 
 	}
 `
