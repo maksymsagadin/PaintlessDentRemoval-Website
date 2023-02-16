@@ -22,11 +22,11 @@ const ContactForm = ({ image, phone, located }) => {
 
 	const sendEmail = (e) => {
 		e.preventDefault()
-		emailjs.sendForm('gmail', 'dentduty', form.current, process.env.REACT_APP_EMAILJS)
+		emailjs.sendForm('gmail', 'dentsndings', form.current, process.env.REACT_APP_EMAILJS)
 			.then((result) => {
 				setSuccess('Email was sent successfully!')
 		  	}, (error) => {
-				setError('There was an error sending your message')
+				setError('There was an error sending your message, please give us a call instead.')
 		})
 		e.target.reset()
 	}
