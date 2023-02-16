@@ -116,7 +116,10 @@ export const NavLinks = styled(LinkScroll)`
 	font-weight: 600;
 	&.active {
 		@media screen and (min-width: 960px) {
-			border-bottom: 4px solid ${primary};
+			border-bottom: 3px solid ${primary};
+			border-radius: 2px;
+			height: 67%;
+
 		}
 	}
 	&:hover {
