@@ -12,6 +12,10 @@ export const HeroSection = styled.section`
 	padding-bottom: 5.5rem;
 	align-items: flex-end;
 	object-fit: contain;
+	@media screen and (min-width: 960px) {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+			url(${props => props.bgImgMobile});
+		}
 `
 
 export const HeroHeading = styled.h1`

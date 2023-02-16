@@ -9,13 +9,13 @@ import Modal from '../Modal/Modal'
 
 const Hero = ({ heroData }) => {
     const [showModal, setShowModal] = useState(false)
-	const { heading, greeting, heroImage, logo, contactImage, phone, located} = heroData
+	const { heading, greeting, heroImageMobile, heroImage, logo, contactImage, phone, located} = heroData
     const { ref, inView } = useInView({
 		rootMargin: '-80px',
 	})
     return (
         <>
-			<HeroSection ref={ref} bgImg={heroImage.url}>
+			<HeroSection ref={ref} bgImg={heroImage.url} bgImgMobile={heroImageMobile.url}>
 				<Container>
 					<HeroHeading>{heading}</HeroHeading>
 					<HeroText>{greeting}</HeroText>

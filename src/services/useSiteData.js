@@ -5,6 +5,9 @@ query Data {
     heroSection(where: {active: true}) {
       heading
       greeting
+      heroImageMobile {
+        url
+      }
       heroImage {
         url
       }
