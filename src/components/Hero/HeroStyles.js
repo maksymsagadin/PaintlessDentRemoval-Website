@@ -5,7 +5,7 @@ import { primary, light } from '../../data/GlobalData'
 export const HeroSection = styled.section`
 	height: 100vh;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-		url(${props => props.bgImg});
+		url(${props => props.bgImgMobile});
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -14,7 +14,7 @@ export const HeroSection = styled.section`
 	object-fit: contain;
 	@media screen and (min-width: 960px) {
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-			url(${props => props.bgImgMobile});
+			url(${props => props.bgImg});
 		}
 `
 
