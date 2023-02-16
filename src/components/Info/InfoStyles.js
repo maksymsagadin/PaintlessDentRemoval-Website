@@ -37,10 +37,12 @@ export const InfoColumn = styled.div`
 
 export const Image = styled.div`
 	height: 600px;
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(2, 3, 5, 0.4)),
-		url('./assets/jacob.jpg');
+	border-radius: 4px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(2, 3, 5, 0.65)),
+		url(${props => props.sideImg});
 	background-position: 0px 33%;
 	background-size: cover;
+	object-fit: contain;
 `
 export const InfoWrapper = styled.div`
 	padding-right: 2rem;
