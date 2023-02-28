@@ -62,7 +62,7 @@ const Features = ({ id, servicesData }) => {
 							key={index}
 							>
 							<FeatureImageWrapper>
-								<img src={service.logo.url} alt={service.shortSummary} height={90} width={90}/>
+								<img src={service.logo.url} alt={service.shortSummary} height={95} width={95}/>
 							</FeatureImageWrapper>
 							<FeatureName>{service.heading}</FeatureName>
 							<FeatureText>{service.shortSummary}</FeatureText>
