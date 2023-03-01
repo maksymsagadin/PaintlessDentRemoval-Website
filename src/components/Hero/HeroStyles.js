@@ -10,13 +10,15 @@ export const HeroSection = styled.section`
 	background-size: cover;
 	display: flex;
 	padding-bottom: 5.5rem;
-	align-items: flex-end;
+	align-items: center;
 	object-fit: contain;
 	@media screen and (min-width: 960px) {
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
 			url(${props => props.bgImg});
 			background-position: center;
 			background-size: cover;
+			align-items: flex-end;
+
 		}
 `
 
