@@ -80,10 +80,9 @@ export const NavMenu = styled.ul`
 	@media screen and (max-width: 960px) {
 		flex-direction: column;
 		width: 100%;
-		height: 40vh;
+		height: 30vh;
 		position: fixed;
-		padding-top: 20%;
-		padding-bottom: 20%;
+		padding-top: 10%;
 		top: 0;
 		left: 0;
 		opacity: ${({ show }) => (show ? 1 : 0)};
@@ -99,6 +98,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
 	height: 100%;
+	background-color: ${dark};
 	cursor: alias;
 	@media screen and (max-width: 960px) {
 		width: 100%;
