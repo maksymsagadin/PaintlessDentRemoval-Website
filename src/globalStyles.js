@@ -14,9 +14,9 @@ export const Container = styled.div`
     max-width: 1330px;
     margin: 0 auto;
     padding: 0 50px;
-
     @media screen and (max-width: 960px){
         padding: 0 30px;
+		margin-bottom: 30px;
     }
 `
 export const Section = styled.div`
