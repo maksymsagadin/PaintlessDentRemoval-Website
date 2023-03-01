@@ -7,7 +7,7 @@ export const ContentSec = styled.div`
 	padding: 60px 0;
 	background: ${props => props.color};
 	@media screen and (max-width: 768px) {
-		padding-bottom: 0px;
+		padding-bottom: 5px;
 	}
 `
 
