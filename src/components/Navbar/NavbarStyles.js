@@ -80,9 +80,10 @@ export const NavMenu = styled.ul`
 	@media screen and (max-width: 960px) {
 		flex-direction: column;
 		width: 100%;
-		height: 100vh;
+		height: 40vh;
 		position: fixed;
-		padding-top: 30%;
+		padding-top: 20%;
+		padding-bottom: 20%;
 		top: 0;
 		left: 0;
 		opacity: ${({ show }) => (show ? 1 : 0)};
