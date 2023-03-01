@@ -24,7 +24,6 @@ const Navbar = ({ logo, hide, setShowModal }) => {
 			<NavbarContainer>
 				<NavLeft to="/" onClick={scroll.scrollToTop}>
 					<NavLogo src={logo.url} alt={websiteName} height={100} width={100}/>
-					{websiteName}
 				</NavLeft>
 
 				{!hide && (
