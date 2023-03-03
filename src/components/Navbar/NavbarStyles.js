@@ -84,7 +84,7 @@ export const NavMenu = styled.ul`
 		height: 80px;
 		position: fixed;
 		padding-top: 3%;
-		padding-left: 60%;
+		padding-left: 45%;
 		top: 0;
 		left: 0;
 		opacity: ${({ show }) => (show ? 1 : 0)};
