@@ -77,20 +77,22 @@ export const NavMenu = styled.ul`
 	list-style: none;
 	text-align: center;
 	width: 100%;
+	background-color: ${dark};
 	@media screen and (max-width: 960px) {
 		flex-direction: column;
 		width: 100%;
-		height: 30vh;
+		height: 80px;
 		position: fixed;
-		padding-top: 10%;
+		padding-top: 3%;
+		padding-left: 60%;
 		top: 0;
 		left: 0;
 		opacity: ${({ show }) => (show ? 1 : 0)};
 		visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 		transform: translateY(${({ show }) => (show ? '0' : '-10px')});
 		transition: opacity 0.5s ease;
-		background-color: ${dark};
 	}
+	
 	> li:first-child {
 		margin-left: auto;
 	}
