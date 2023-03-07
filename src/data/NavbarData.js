@@ -1,21 +1,11 @@
 export const navbarData = [
 	{
-		text: 'About',
-		id: 'about',
-		spy: true,
-		duration: 500,
-		smooth: true,
-		exact: 'true',
-		offset: -79,
-		to: 'about',
-	},
-	{
 		text: 'Services',
 		spy: true,
 		duration: 500,
 		smooth: true,
 		exact: 'true',
-		offset: -79,
+		offset: -70,
 		to: 'services',
 	},
 	{
@@ -24,7 +14,17 @@ export const navbarData = [
 		duration: 500,
 		smooth: true,
 		exact: 'true',
-		offset: -79,
+		offset: -70,
 		to: 'work',
+	},
+	{
+		text: 'About',
+		id: 'about',
+		spy: true,
+		duration: 500,
+		smooth: true,
+		exact: 'true',
+		offset: -70,
+		to: 'about',
 	},
 ]

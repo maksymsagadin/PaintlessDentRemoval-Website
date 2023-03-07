@@ -23,7 +23,7 @@ const Hero = ({ heroData }) => {
 						<Button onClick={() => {setShowModal(true)}}>
 							Contact
 						</Button>
-						<LinkScroll to={'about'} smooth={true} duration={500} offset={-79}>
+						<LinkScroll to={'services'} smooth={true} duration={500} offset={-70}>
 							<Button> Scroll ↯ </Button>
 						</LinkScroll>
 					</ButtonWrapper>

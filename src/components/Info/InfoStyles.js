@@ -4,7 +4,7 @@ import { light, dark, primary } from '../../data/GlobalData'
 
 
 export const InfoSection = styled(Section)`
-	padding: 4rem 0 0;
+	padding: 4rem 0;
 	@media screen and (max-width: 768px) {
 		padding: 2rem 1rem;
 	}

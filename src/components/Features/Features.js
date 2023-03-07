@@ -39,41 +39,41 @@ const Features = ({ id, servicesData }) => {
 
 	return (
 		<div id={id}>
-		<FeatureSection >
-			<Container ref={ref}>
-				<FeatureTextWrapper
-					initial={initial}
-					animate={animation}
-					transition={{ duration: 0.5 }}
-					>
-					<FeatureTitle>
-						{heading}
-					</FeatureTitle>
-					<FeatureMainText>
-						{description}
-					</FeatureMainText>
-				</FeatureTextWrapper>
-				<FeatureWrapper>
-					{services.map((service, index) => (
-						<FeatureColumn
-							initial={initial}
-							animate={animation}
-							transition={{ duration: 0.7 + index * 0.1 }}
-							key={index}
-							>
-							<FeatureImageWrapper>
-								<img src={service.logo.url} alt={service.shortSummary} height={95} width={95}/>
-							</FeatureImageWrapper>
-							<FeatureName>{service.heading}</FeatureName>
-							<FeatureText>{service.shortSummary}</FeatureText>
-						</FeatureColumn>
-					))}
-				</FeatureWrapper>
-			</Container>
-		</FeatureSection>
-		{services.map((service, index) => (
-              <Content {...service} key={index} />
-          ))}
+			<FeatureSection >
+				<Container ref={ref}>
+					<FeatureTextWrapper
+						initial={initial}
+						animate={animation}
+						transition={{ duration: 0.5 }}
+						>
+						<FeatureTitle>
+							{heading}
+						</FeatureTitle>
+						<FeatureMainText>
+							{description}
+						</FeatureMainText>
+					</FeatureTextWrapper>
+					<FeatureWrapper>
+						{services.map((service, index) => (
+							<FeatureColumn
+								initial={initial}
+								animate={animation}
+								transition={{ duration: 0.7 + index * 0.1 }}
+								key={index}
+								>
+								<FeatureImageWrapper>
+									<img src={service.logo.url} alt={service.shortSummary} height={95} width={95}/>
+								</FeatureImageWrapper>
+								<FeatureName>{service.heading}</FeatureName>
+								<FeatureText>{service.shortSummary}</FeatureText>
+							</FeatureColumn>
+						))}
+					</FeatureWrapper>
+				</Container>
+			</FeatureSection>
+			{services.map((service, index) => (
+				<Content {...service} key={index} />
+			))}
 		</div>
 	)
 }
