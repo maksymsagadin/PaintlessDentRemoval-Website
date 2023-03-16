@@ -9,8 +9,8 @@ const HomePage = ({ heroSection, aboutSection, servicesSection, gallerySection }
     <>
       <Hero heroData={heroSection}/>
       <Features id='services' servicesData={servicesSection} />
-      <WorkSection id='work' galleryData={gallerySection}/>
       <Info id='about' aboutData={aboutSection} />
+      <WorkSection id='work' galleryData={gallerySection}/>
     </>
   )
 }
