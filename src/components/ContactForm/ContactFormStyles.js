@@ -15,7 +15,9 @@ export const ContactInfo = styled.h2`
 	margin: 1rem;
 	color: ${light};
 	font-size: 1.2rem;
-	&:first-child {
+	& > a {
+		color: ${light};
+		text-decoration: none;
 		margin-bottom: -1rem;
 	}
 	@media screen and (max-width: 768px) {

@@ -46,12 +46,14 @@ const ContactForm = ({ image, phone, located }) => {
         <FormSection>
 			<FormRow>
 				<HeroColumn bgImg={image.url} >
-					<ContactInfo>
-						{phone}
-					</ContactInfo>
-					<ContactInfo>
-						{located}
-					</ContactInfo>
+					<address>
+						<ContactInfo>
+							<a href={`tel:+1-${phone}`}>{phone}</a>
+						</ContactInfo>
+						<ContactInfo>
+							{located}
+						</ContactInfo>
+					</address>
 				</HeroColumn>
 				<FormColumn>
 					<FormTitle>Contact</FormTitle>
