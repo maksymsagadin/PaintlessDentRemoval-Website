@@ -44,7 +44,7 @@ const Navbar = ({ logo, hide, setShowModal }) => {
 										offset={item.offset}
 										onClick={() => setShow(false)}
 										to={item.to}
-									>
+										>
 										{item.text}
 									</NavLinks>
 								</NavItem>
